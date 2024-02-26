@@ -15,3 +15,11 @@ C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExam
 C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask.exe
 C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask.pdb
 C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\App.baml
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\bin\Debug\EntityFramework.dll
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\bin\Debug\EntityFramework.xml
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\Pages\AllProductsPage.g.cs
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask_Content.g.cs
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\Pages\AllProductsPage.baml
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask.csproj.CopyComplete
