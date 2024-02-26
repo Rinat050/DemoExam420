@@ -21,15 +21,123 @@ namespace DemoExamTask.Pages
     /// </summary>
     public partial class AllProductsPage : Page
     {
+        private string FilterName;
+        private string SearchFilter = "";
+        private string SortField;
+        private bool IsAsc = false;
+
         public AllProductsPage()
         {
             InitializeComponent();
-            FillProducts();
+            FillFilterData();
+
+            Loaded += PageLoaded;
         }
 
-        private void FillProducts()
+        private void FillFilterData()
         {
-            lvProducts.ItemsSource = App.Connection.Product.ToList();
+            var filters = new List<ProductType> { new ProductType { Name = "Все типы" } };
+            filters.AddRange(App.Connection.ProductType.ToList());
+            cbFilter.ItemsSource = filters;
+            cbFilter.SelectedIndex = 0;
+
+            var sorts = new List<string> {
+                "Без сортировки",
+                "Наименование", "Номер производственного цеха",
+                "Минимальная стоимость для агента"};
+            cbSort.ItemsSource = sorts;
+            cbSort.SelectedIndex = 0;
+
+            cbSortOrders.ItemsSource = new List<string> { "По убыванию", "По возрастанию" };
+            cbSortOrders.SelectedIndex = 0;
+        }
+
+        private void PageLoaded(object sender, RoutedEventArgs e)
+        {
+            FillFilterData();
+            UpdateSource();
+        }
+
+        private void UpdateSource()
+        {
+            List<Product> products;
+            if (string.IsNullOrEmpty(FilterName) || FilterName == "Все типы")
+            {
+                products = App.Connection.Product.ToList();
+            }
+            else
+            {
+                products = App.Connection.Product.ToList().Where(x =>
+                x.ProductType.Name == FilterName
+                && x.Name.ToLower().Contains(SearchFilter.ToLower())).ToList();
+            }
+
+            if (IsAsc)
+            {
+                if (SortField == "Наименование")
+                {
+                    products = products.OrderBy(x => x.Name).ToList();
+                }
+                else if (SortField == "Номер производственного цеха")
+                {
+                    products = products.OrderBy(x => x.FactoryNumber).ToList();
+                }
+                else
+                {
+                    products = products.OrderBy(x => x.FactoryNumber).ToList();
+                }
+            }
+            else
+            {
+                if (SortField == "Наименование")
+                {
+                    products = products.OrderByDescending(x => x.Name).ToList();
+                }
+                else if (SortField == "Номер производственного цеха")
+                {
+                    products = products.OrderByDescending(x => x.FactoryNumber).ToList();
+                }
+                else
+                {
+                    products = products.OrderByDescending(x => x.MinimalAgentPrice).ToList();
+                }
+            }
+        }
+
+        private void cbSortOrders_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var order = (string)((ComboBox)sender).SelectedItem;
+            if (order == "По возрастанию")
+            {
+                IsAsc = true;
+            }
+            else
+            {
+                IsAsc = false;
+            }
+            UpdateSource();
+        }
+
+        private void cbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SortField = (string)((ComboBox)sender).SelectedItem;
+            UpdateSource();
+        }
+
+        private void cbFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedItem = (ProductType)((ComboBox)sender).SelectedItem;
+            if (selectedItem == null)
+                return;
+            FilterName = selectedItem.Name;
+            UpdateSource();
+        }
+
+        private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var text = ((TextBox)sender).Text;
+            SearchFilter = text;
+            UpdateSource();
         }
     }
 }
