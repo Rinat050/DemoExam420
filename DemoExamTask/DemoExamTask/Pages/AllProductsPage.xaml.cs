@@ -67,9 +67,10 @@ namespace DemoExamTask.Pages
             else
             {
                 products = App.Connection.Product.ToList().Where(x =>
-                x.ProductType.Name == FilterName
-                && x.Name.ToLower().Contains(SearchFilter.ToLower())).ToList();
+                            x.ProductType.Name == FilterName).ToList();
             }
+
+            products = products.Where(x => x.Name.ToLower().Contains(SearchFilter.ToLower())).ToList();
 
             if (IsAsc)
             {
