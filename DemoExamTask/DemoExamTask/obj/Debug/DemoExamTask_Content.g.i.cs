@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("%d0%9b%d0%be%d0%bf%d1%83%d1%88%d0%be%d0%ba.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ado/model1.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ado/model1.tt")]
 
 
