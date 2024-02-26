@@ -29,8 +29,6 @@ namespace DemoExamTask.Pages
         public AllProductsPage()
         {
             InitializeComponent();
-            FillFilterData();
-
             Loaded += PageLoaded;
         }
 
@@ -61,6 +59,7 @@ namespace DemoExamTask.Pages
         private void UpdateSource()
         {
             List<Product> products;
+
             if (string.IsNullOrEmpty(FilterName) || FilterName == "Все типы")
             {
                 products = App.Connection.Product.ToList();
@@ -82,9 +81,9 @@ namespace DemoExamTask.Pages
                 {
                     products = products.OrderBy(x => x.FactoryNumber).ToList();
                 }
-                else
+                else if (SortField == "Минимальная стоимость для агента")
                 {
-                    products = products.OrderBy(x => x.FactoryNumber).ToList();
+                    products = products.OrderBy(x => x.MinimalAgentPrice).ToList();
                 }
             }
             else
@@ -97,11 +96,13 @@ namespace DemoExamTask.Pages
                 {
                     products = products.OrderByDescending(x => x.FactoryNumber).ToList();
                 }
-                else
+                else if (SortField == "Минимальная стоимость для агента")
                 {
                     products = products.OrderByDescending(x => x.MinimalAgentPrice).ToList();
                 }
             }
+
+            lvProducts.ItemsSource = products;
         }
 
         private void cbSortOrders_SelectionChanged(object sender, SelectionChangedEventArgs e)
