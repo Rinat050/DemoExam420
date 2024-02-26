@@ -1,0 +1,17 @@
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\bin\Debug\DemoExamTask.exe.config
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\bin\Debug\DemoExamTask.exe
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\bin\Debug\DemoExamTask.pdb
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask.csproj.AssemblyReference.cache
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask.csproj.SuggestedBindingRedirects.cache
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\App.g.cs
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask_MarkupCompile.cache
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask_MarkupCompile.lref
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\Windows\MainWindow.baml
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask.g.resources
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask.Properties.Resources.resources
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask.csproj.GenerateResource.cache
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask.exe
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\DemoExamTask.pdb
+C:\Users\Пользователь\source\repos\DemoExam420\DemoExamTask\DemoExamTask\obj\Debug\App.baml
